@@ -1,0 +1,6 @@
+{
+    "require": {
+        "paragonie/random_compat": "2.*",
+        "chatwork/oauth2-chatwork": "^0.1.1"
+    }
+}

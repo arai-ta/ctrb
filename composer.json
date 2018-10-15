@@ -1,7 +1,10 @@
 {
     "require": {
         "paragonie/random_compat": "2.*",
-        "chatwork/oauth2-chatwork": "^0.1.1"
+        "chatwork/oauth2-chatwork": "^0.1.1",
+        "guzzlehttp/guzzle": "~6.0",
+        "vlucas/phpdotenv": "^2.5",
+        "monolog/monolog": "^1.23"
     },
     "autoload": {
         "psr-4": {

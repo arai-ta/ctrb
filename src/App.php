@@ -16,7 +16,7 @@ class App
     {
 
         $auth = new Chatwork\Auth();
-        
+
         $url = $auth->getConsentUrl();
 
         echo $url;

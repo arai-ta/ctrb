@@ -12,6 +12,12 @@ $logger->pushHandler(new \Monolog\Handler\StreamHandler(
 
 $GLOBALS['logger'] = $logger;
 
+$redis = new Predis\Client([
+    'host' => getenv('REDIS_HOST'),
+    'port' => getenv('REDIS_PORT'),
+]);
+
+$GLOBALS['redis'] = $redis;
+
 $app = new Ctrb\App;
 $app->execute();
-

@@ -57,7 +57,10 @@ class App
             }
             $access_token = $token;
         } else {
-            $access_token = $provider->getAccessToken(new RefreshToken(), ['refresh_token' => getenv('EXAMPLE_USER_REFRESH_TOKEN')]);
+
+            $access_token = $provider->getAccessToken(new RefreshToken(), [
+                'refresh_token' => getenv('EXAMPLE_USER_REFRESH_TOKEN'),
+            ]);
         }
 
         echo '<hr>';

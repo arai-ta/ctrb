@@ -38,7 +38,7 @@ class Auth
         ]);
     }
 
-    public function authByCode($code): AccessToken
+    public function authByCode($code)
     {
         try {
             return $this->oauth->getAccessToken(new AuthorizationCode(), [

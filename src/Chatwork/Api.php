@@ -3,10 +3,8 @@
 namespace Ctrb\Chatwork;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Psr7\Stream;
-use function GuzzleHttp\Psr7\stream_for;
 use League\OAuth2\Client\Token\AccessToken;
 use Monolog\Logger;
 
@@ -49,7 +47,7 @@ class Api
 
             return $response->getBody()->getContents();
 
-        } catch (ClientException $e) {
+        } catch (GuzzleException $e) {
 
             $this->logger->error($e->getMessage());
 
